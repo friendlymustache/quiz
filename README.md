@@ -1,11 +1,22 @@
-# quiz
+# Description:
 
+A Python module that finds the largest compound word in a 
+file containing a newline-separated list of words.
 
-Q: Given a list of words like https://github.com/NodePrime/quiz/blob/master/word.list find the longest compound-word in the list, which is also a concatenation of other sub-words that exist in the list. The program should allow the user to input different data. The finished solution shouldn't take more than one hour. Any programming language can be used, but Go is preferred.
+Uses a dynamic programming approach to determine whether
+a word of length K is a compound word in O(K^2) time,
+and a Trie to avoid redundant storage of words' prefixes,
+thereby improving memory usage. 
 
+Given a list of N words, the algorithm therefore runs in
+approximately O(NK^2), where K is the average length
+of a word.
 
-Fork this repo, add your solution and documentation on how to compile and run your solution, and then issue a Pull Request. 
+The Trie implementation allows the user to specify whether
+they'd like to optimize for memory usage or speed by using
+two different node implementations.
 
-Obviously, we are looking for a fresh solution, not based on others' code.
+# Usage:
 
-
+Running the program:
+python find_compound.py filename
